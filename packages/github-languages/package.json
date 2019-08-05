@@ -1,7 +1,7 @@
 {
-  "name": "github-trending",
+  "name": "github-languages",
   "version": "1.0.0",
-  "description": "A library to get `GitHub trending repositories` or `GitHub trending developers` for JavaScript developers.",
+  "description": "A library to get `GitHub languages` for JavaScript developers.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,7 +10,7 @@
   "repository": {
     "type": "git",
     "url": "http://github.com/upcwangying/github-apis",
-    "directory": "packages/github-trending"
+    "directory": "packages/github-languages"
   },
   "homepage": "http://github.com/upcwangying/github-apis",
   "bugs": "http://github.com/upcwangying/github-apis/issues",
