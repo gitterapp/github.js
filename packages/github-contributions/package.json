@@ -9,11 +9,11 @@
   "keywords": [],
   "repository": {
     "type": "git",
-    "url": "http://github.com/upcwangying/github-apis",
+    "url": "http://github.com/upcwangying/githubjs",
     "directory": "packages/github-contributions"
   },
-  "homepage": "http://github.com/upcwangying/github-apis",
-  "bugs": "http://github.com/upcwangying/github-apis/issues",
+  "homepage": "http://github.com/upcwangying/githubjs",
+  "bugs": "http://github.com/upcwangying/githubjs/issues",
   "authors": [
     "Ying Wang <upcwangying@gmail.com> (https://github.com/upcwangying)"
   ],
