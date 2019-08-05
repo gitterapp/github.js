@@ -17,5 +17,9 @@
   "authors": [
     "Ying Wang <upcwangying@gmail.com> (https://github.com/upcwangying)"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4"
+  }
 }

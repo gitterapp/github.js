@@ -76,6 +76,7 @@ build/Release
 
 # Dependency directories
 node_modules/
+packages/**/node_modules
 jspm_packages/
 
 # TypeScript v1 declaration files
@@ -131,3 +132,4 @@ typings/
 !.vscode/launch.json
 !.vscode/extensions.json
 
+package-lock.json
