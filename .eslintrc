@@ -15,6 +15,8 @@
     "sourceType": "module"
   },
   "rules": {
-    "semicolon": 0
+    "semi": [0],
+    "arrow-parens": [1, "as-needed"],
+    "prefer-promise-reject-errors": [0]
   }
 }
