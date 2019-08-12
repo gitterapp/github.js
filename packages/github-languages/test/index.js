@@ -1,4 +1,4 @@
-const getLanguages = require('../src/index.js')
+const getLanguages = require('../src/index')
 
 getLanguages().then(result => {
   console.log(result.length)
