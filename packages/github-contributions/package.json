@@ -1,6 +1,6 @@
 {
   "name": "@githubjs/github-contributions",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A library to get `GitHub contributions` for JavaScript developers.",
   "main": "src/index.js",
   "scripts": {
