@@ -1,7 +1,12 @@
-const getContributions = require('../src/index')
+const { getContributions } = require('../src/index')
 
-getContributions({ login: 'upcwangying' }).then(result => {
-  console.log(result)
-}).catch(error => {
-  console.error(error)
+describe('get contributions', () => {
+  let contributions
+  beforeAll(async () => {
+    contributions = await getContributions('upcwangying', {})
+  })
+
+  test('has data', () => {
+    expect(contributions).not.toBeNull()
+  })
 })
