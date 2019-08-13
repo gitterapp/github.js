@@ -13,12 +13,12 @@ const options = {
   transform: (body) => cheerio.load(body),
 };
 
-const getTrendingRepositories = (since, language) => new Promise((resolve, reject) => {
+const getTrendingRepositories = ({ since, language }) => new Promise((resolve, reject) => {
   let uri = 'https://github.com/trending';
-  if (language != null) {
+  if (language) {
     uri += `/${language}`;
   }
-  if (since != null) {
+  if (since) {
     uri += `?since=${since}`;
   }
   rp({ ...options, uri })
@@ -112,12 +112,12 @@ const getTrendingRepositories = (since, language) => new Promise((resolve, rejec
     })
 })
 
-const getTrendingDevelopers = (since, language) => new Promise((resolve, reject) => {
+const getTrendingDevelopers = ({ since, language }) => new Promise((resolve, reject) => {
   let uri = 'https://github.com/trending/developers';
-  if (language != null) {
+  if (language) {
     uri += `/${language}`;
   }
-  if (since != null) {
+  if (since) {
     uri += `?since=${since}`;
   }
   rp({ ...options, uri })
@@ -129,7 +129,7 @@ const getTrendingDevelopers = (since, language) => new Promise((resolve, reject)
       const developers = [];
       $('.Box-row').each((i, el) => {
         let popularRepository;
-        const popularParentNode = $('.d-sm-flex>div>div', el)
+        const popularParentNode = $('.d-sm-flex .col-md-6', el)
         const popularNode = popularParentNode == null ? null : popularParentNode.last();
 
         if (popularNode != null) {

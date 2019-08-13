@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": ["github-languages", "github", "languages"],
   "repository": {
     "type": "git",
     "url": "http://github.com/upcwangying/githubjs",

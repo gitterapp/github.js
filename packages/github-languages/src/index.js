@@ -1,6 +1,6 @@
 const rp = require('request-promise')
 const cheerio = require('cheerio')
-const Language = require('./model/language.js')
+const Language = require('./model/index.js')
 
 const options = {
   uri: 'https://github.com/trending',
