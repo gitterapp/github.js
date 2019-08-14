@@ -4,8 +4,10 @@
     "browser": true,
     "es6": true
   },
+  "plugins": ["prettier"],
   "extends": [
-    "airbnb-base"
+    "airbnb-base",
+    "plugin:prettier/recommended"
   ],
   "globals": {
     "Atomics": "readonly",

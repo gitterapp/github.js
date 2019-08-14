@@ -1,10 +1,10 @@
 {
   "printWidth": 100,
   "singleQuote": true,
+  "semi": false,
   "trailingComma": "all",
   "proseWrap": "never",
   "overrides": [
-    { "files": ".webpackrc", "options": { "parser": "json" } },
     { "files": ".prettierrc", "options": { "parser": "json" } }
   ]
 }

@@ -1,4 +1,3 @@
-
 class Language {
   constructor(text) {
     this.text = text

@@ -1,7 +1,17 @@
 // trending repositories model
 class TrendingRepository {
-  constructor({ owner, avatar, name, description, descriptionHTML,
-    starCount, forkCount, stars, primaryLanguage, buildBys }) {
+  constructor({
+    owner,
+    avatar,
+    name,
+    description,
+    descriptionHTML,
+    starCount,
+    forkCount,
+    stars,
+    primaryLanguage,
+    buildBys,
+  }) {
     this.owner = owner
     this.avatar = avatar
     this.name = name
