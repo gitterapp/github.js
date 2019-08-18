@@ -50,7 +50,7 @@ const getContributionsSvg = (login, { keepDateText = false, from, to }) =>
           reject('response is null!')
           return
         }
-        const svgNode = $('js-calendar-graph-svg')
+        const svgNode = $('.js-calendar-graph-svg')
 
         if (!keepDateText) {
           // todo

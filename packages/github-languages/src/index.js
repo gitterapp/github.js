@@ -1,24 +1,25 @@
 const rp = require('request-promise')
-const cheerio = require('cheerio')
+const jsyaml = require('js-yaml')
 const Language = require('./model/index.js')
 
 const options = {
-  uri: 'https://github.com/trending',
-  transform: body => cheerio.load(body),
+  uri: 'https://raw.githubusercontent.com/github/linguist/master/lib/linguist/languages.yml',
 }
 
 const getLanguages = () =>
   new Promise((resolve, reject) => {
     rp(options)
-      .then($ => {
-        if (!$) {
+      .then(response => {
+        if (!response) {
           reject('response is null!')
           return
         }
         const languages = []
-        $('.select-menu-list > div .select-menu-item-text').each((i, el) => {
-          languages.push(new Language($(el).text()))
-        })
+        const resultLanguages = jsyaml.safeLoad(response)
+        for (const language in resultLanguages) {
+          const resultLanguage = resultLanguages[language]
+          languages.push(new Language(language, resultLanguage.color || '#cccccc'))
+        }
         resolve(languages)
       })
       .catch(error => {

@@ -23,6 +23,8 @@
     "prefer-promise-reject-errors": [0],
     "object-curly-newline": [0],
     "operator-linebreak": ["error", "after"],
+    "guard-for-in": [0],
+    "no-restricted-syntax": [0],
     "import/newline-after-import": [0],
     "import/prefer-default-export": [0],
     "import/no-unresolved": [0]

@@ -1,10 +1,15 @@
 class Language {
-  constructor(text) {
+  constructor(text, color) {
     this.text = text
+    this.color = color
   }
 
-  toString() {
-    return `(${this.text})`
+  toJson() {
+    return JSON.stringify(this)
+  }
+
+  static fromJson(json) {
+    return JSON.parse(json)
   }
 }
 
