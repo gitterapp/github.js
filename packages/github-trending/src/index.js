@@ -13,7 +13,7 @@ const options = {
   transform: body => cheerio.load(body),
 }
 
-const getTrendingRepositories = ({ since, language }) =>
+const getTrendingRepositories = ({ since, language } = {}) =>
   new Promise((resolve, reject) => {
     let uri = 'https://github.com/trending'
     if (language) {
@@ -144,7 +144,7 @@ const getTrendingRepositories = ({ since, language }) =>
       })
   })
 
-const getTrendingDevelopers = ({ since, language }) =>
+const getTrendingDevelopers = ({ since, language } = {}) =>
   new Promise((resolve, reject) => {
     let uri = 'https://github.com/trending/developers'
     if (language) {

@@ -6,7 +6,7 @@ const {
 describe('get trending repositories', () => {
   let repositories
   beforeAll(async () => {
-    repositories = await getTrendingRepositories({})
+    repositories = await getTrendingRepositories()
   })
 
   test('has data', () => {
@@ -17,7 +17,7 @@ describe('get trending repositories', () => {
 describe('get trending developers', () => {
   let developers
   beforeAll(async () => {
-    developers = await getTrendingDevelopers({})
+    developers = await getTrendingDevelopers()
   })
 
   test('has data', () => {

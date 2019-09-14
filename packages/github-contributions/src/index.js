@@ -7,7 +7,7 @@ const options = {
   transform: body => cheerio.load(body),
 }
 
-const getContributions = (login, { from, to }) =>
+const getContributions = (login, { from, to } = {}) =>
   new Promise((resolve, reject) => {
     if (!login) throw new Error('login must not be null')
     let uri = `https://github.com/${login}`
