@@ -47,8 +47,9 @@ const getTrendingRepositories = ({ since, language } = {}) =>
           if (starNode != null) {
             starCountStr = $(starNode)
               .parent()
+              .parent()
               .html()
-              .replace(/^[\s\S]*svg>/, '')
+              .replace(/^[\s\S]*span>/g, '')
               .replace(/,/g, '')
           }
 
@@ -59,8 +60,9 @@ const getTrendingRepositories = ({ since, language } = {}) =>
           if (forkNode != null) {
             forkCountStr = $(forkNode)
               .parent()
+              .parent()
               .html()
-              .replace(/^[\s\S]*svg>/, '')
+              .replace(/^[\s\S]*span>/g, '')
               .replace(/,/g, '')
           }
 
@@ -71,7 +73,7 @@ const getTrendingRepositories = ({ since, language } = {}) =>
           if (starsNode != null) {
             starsStr = $(starsNode)
               .html()
-              .replace(/^[\s\S]*svg>/, '')
+              .replace(/^[\s\S]*span>/g, '')
               .replace(/,/g, '')
               .trim()
           }
@@ -104,7 +106,7 @@ const getTrendingRepositories = ({ since, language } = {}) =>
               )
             })
           }
-          const usernameNode = $('h1>a>span', el)
+          const usernameNode = $('.text-normal', el)
           let username
           if (usernameNode) {
             username = usernameNode
@@ -113,10 +115,11 @@ const getTrendingRepositories = ({ since, language } = {}) =>
               .trim()
           }
 
-          const repoNode = $('h1>a', el)
+          const repoNode = $('.text-normal', el)
           let reponame
           if (repoNode) {
             reponame = repoNode
+              .parent()
               .html()
               .replace(/[\s\S]*span>/g, '')
               .trim()
