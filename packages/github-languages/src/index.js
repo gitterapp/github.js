@@ -27,4 +27,8 @@ const getLanguages = () =>
       })
   })
 
-module.exports = getLanguages
+module.exports = {
+  Language,
+
+  getLanguages,
+}

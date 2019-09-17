@@ -1,5 +1,7 @@
 const rp = require('request-promise')
 const cheerio = require('cheerio')
+const TrendingSince = require('./constant/trending-since')
+const TrendingType = require('./constant/trending-type')
 const {
   TrendingRepository,
   PrimaryLanguage,
@@ -235,6 +237,15 @@ const getTrendingDevelopers = ({ since, language } = {}) =>
   })
 
 module.exports = {
+  TrendingRepository,
+  PrimaryLanguage,
+  RepositoryBuildBy,
+  TrendingDeveloper,
+  PopularRepository,
+
+  TrendingSince,
+  TrendingType,
+
   getTrendingRepositories,
   getTrendingDevelopers,
 }

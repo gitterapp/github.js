@@ -64,6 +64,8 @@ const getContributionsSvg = (login, { keepDateText = false, from, to }) =>
   })
 
 module.exports = {
+  Contribution,
+
   getContributions,
   getContributionsSvg,
 }
