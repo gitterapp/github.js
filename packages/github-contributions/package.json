@@ -28,5 +28,8 @@
   "dependencies": {
     "cheerio": "^0.22.0",
     "request-promise": "^4.2.4"
+  },
+  "peerDependencies": {
+    "request": "^2.34"
   }
 }

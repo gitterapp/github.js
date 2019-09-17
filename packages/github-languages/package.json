@@ -28,5 +28,8 @@
   "dependencies": {
     "js-yaml": "^3.13.1",
     "request-promise": "^4.2.4"
+  },
+  "peerDependencies": {
+    "request": "^2.34"
   }
 }
