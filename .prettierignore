@@ -1,14 +1,4 @@
 # Created by .ignore support plugin (hsz.mobi)
-**/template/**/*.js
-**/template/**/*.ts
-**/templates/**/*.js
-**/templates/**/*.ts
-**/templates/**/*.json
-packages/af-webpack/src/getConfig/index.js
-packages/af-webpack/src/getConfig/css.js
-packages/af-webpack/src/getConfig/eslint.js
-packages/af-webpack/src/getConfig/dev.js
-packages/af-webpack/src/getConfig/prod.js
 package.json
 /dist
 .dockerignore

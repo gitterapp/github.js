@@ -1,4 +1,4 @@
-const {getLanguages, Language} = require('../src/index')
+const { getLanguages } = require('../src/index')
 
 describe('get languages', () => {
   let languages

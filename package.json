@@ -3,6 +3,23 @@
   "workspaces": [
     "packages/*"
   ],
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "changelog": "lerna-changelog",
+    "clean": "lerna clean -y",
+    "lint": "eslint --ext .js packages",
+    "precommit": "lint-staged",
+    "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
+    "test": "jest"
+  },
+  "lint-staged": {
+    "**/*.js": ["prettier --write", "git add"]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
     "eslint": "^5.16.0",
@@ -10,12 +27,11 @@
     "eslint-config-prettier": "^6.0.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-prettier": "^3.1.0",
+    "husky": "^3.0.5",
     "jest": "^24.8.0",
     "lerna": "3.14.1",
     "lerna-changelog": "^0.8.2",
+    "lint-staged": "^9.2.5",
     "prettier": "1.18.2"
-  },
-  "scripts": {
-    "test": "jest"
   }
 }

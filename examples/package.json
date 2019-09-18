@@ -1,0 +1,16 @@
+{
+  "private": true,
+  "name": "examples",
+  "version": "1.0.0",
+  "description": "githubjs samples",
+  "main": "github-languages.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ying Wang <upcwangying@gmail.com> (https://github.com/upcwangying)",
+  "license": "MIT",
+  "dependencies": {
+    "@githubjs/github-trending": "^1.1.4",
+    "request": "^2.88.0"
+  }
+}
