@@ -205,17 +205,24 @@ const getTrendingDevelopers = ({ since, language } = {}) =>
 
           const avatarNode = $('.rounded-1', el)
           const usernameNode = $('.link-gray', el)
-          const nicknameNode = $('.h3>a', el)
+          const nicknameNode = $('.d-md-flex', el)
           let avatar
           if (avatarNode) {
             avatar = $(avatarNode)
               .attr('src')
               .trim()
           }
-          const username = usernameNode == null ? null : $(usernameNode).html()
+          let username
+          if (usernameNode) {
+            username = $(usernameNode)
+              .html()
+              .trim()
+          }
           let nickname
           if (nicknameNode) {
-            nickname = $(nicknameNode)
+            nickname = $('.lh-condensed', nicknameNode)
+              .children()
+              .first()
               .text()
               .trim()
           }
