@@ -13,11 +13,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/upcwangying/githubjs.git",
+    "url": "git+https://github.com/gitterapp/githubjs.git",
     "directory": "packages/github-trending"
   },
-  "homepage": "https://github.com/upcwangying/githubjs",
-  "bugs": "https://github.com/upcwangying/githubjs/issues",
+  "homepage": "https://github.com/gitterapp/githubjs",
+  "bugs": "https://github.com/gitterapp/githubjs/issues",
   "authors": [
     "Ying Wang <upcwangying@gmail.com> (https://github.com/upcwangying)"
   ],
