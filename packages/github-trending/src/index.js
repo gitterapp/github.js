@@ -10,14 +10,16 @@ const {
   PopularRepository,
 } = require('./model/index.js')
 
+const URL = 'https://github.com'
+
 const options = {
-  uri: 'https://github.com/trending',
+  uri: `${URL}/trending`,
   transform: body => cheerio.load(body),
 }
 
 const getTrendingRepositories = ({ since, language } = {}) =>
   new Promise((resolve, reject) => {
-    let uri = 'https://github.com/trending'
+    let uri = `${URL}/trending`
     if (language) {
       uri += `/${language}`
     }
@@ -49,9 +51,8 @@ const getTrendingRepositories = ({ since, language } = {}) =>
           if (starNode != null) {
             starCountStr = $(starNode)
               .parent()
-              .parent()
               .html()
-              .replace(/^[\s\S]*span>/g, '')
+              .replace(/^[\s\S]*svg>/g, '')
               .replace(/,/g, '')
           }
 
@@ -62,9 +63,8 @@ const getTrendingRepositories = ({ since, language } = {}) =>
           if (forkNode != null) {
             forkCountStr = $(forkNode)
               .parent()
-              .parent()
               .html()
-              .replace(/^[\s\S]*span>/g, '')
+              .replace(/^[\s\S]*svg>/g, '')
               .replace(/,/g, '')
           }
 
@@ -75,7 +75,7 @@ const getTrendingRepositories = ({ since, language } = {}) =>
           if (starsNode != null) {
             starsStr = $(starsNode)
               .html()
-              .replace(/^[\s\S]*span>/g, '')
+              .replace(/^[\s\S]*svg>/g, '')
               .replace(/,/g, '')
               .trim()
           }
@@ -130,7 +130,7 @@ const getTrendingRepositories = ({ since, language } = {}) =>
           repositories.push(
             new TrendingRepository({
               owner: username,
-              avatar: `https://avatars.githubusercontent.com/${username}?s=40&amp;v=4`,
+              avatar: `${URL}/${username}.png`,
               name: reponame,
               description,
               descriptionHTML,
@@ -151,7 +151,7 @@ const getTrendingRepositories = ({ since, language } = {}) =>
 
 const getTrendingDevelopers = ({ since, language } = {}) =>
   new Promise((resolve, reject) => {
-    let uri = 'https://github.com/trending/developers'
+    let uri = `${URL}/trending/developers`
     if (language) {
       uri += `/${language}`
     }
