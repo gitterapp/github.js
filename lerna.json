@@ -7,7 +7,7 @@
       "pr(dependency)": ":deciduous_tree: Dependency",
       "pr(chore)": ":turtle: Chore"
     },
-    "repo": "upcwangying/githubjs",
+    "repo": "gitterapp/githubjs",
     "cacheDir": ".changelog"
   },
   "version": "independent",
