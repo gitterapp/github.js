@@ -1,8 +1,5 @@
 {
   "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "changelog": "lerna-changelog",
@@ -10,10 +7,15 @@
     "lint": "eslint --ext .js packages",
     "precommit": "lint-staged",
     "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
-    "test": "jest"
+    "test": "jest --passWithNoTests",
+    "codecov": "codecov",
+    "coveralls": "cat ./coverage/lcov.info | coveralls"
   },
   "lint-staged": {
-    "**/*.js": ["prettier --write", "git add"]
+    "**/*.js": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "husky": {
     "hooks": {
@@ -22,6 +24,8 @@
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
+    "codecov": "^3.6.1",
+    "coveralls": "^3.0.9",
     "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^13.2.0",
     "eslint-config-prettier": "^6.0.0",

@@ -1,5 +1,9 @@
 # Github for JavaScript
 
+[![Travis (.org)](https://img.shields.io/travis/gitterapp/githubjs)](https://travis-ci.org/gitterapp/githubjs)
+[![Codecov](https://img.shields.io/codecov/c/github/gitterapp/githubjs)](https://codecov.io/gh/gitterapp/githubjs)
+[![Coveralls github](https://img.shields.io/coveralls/github/gitterapp/githubjs)](https://coveralls.io/github/gitterapp/githubjs)
+
 Check the `packages` directory for all plugins.
 
 These plugins are also available on
