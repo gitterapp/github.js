@@ -1,4 +1,5 @@
 import resolve from '@rollup/plugin-node-resolve'
+import babel from 'rollup-plugin-babel'
 import json from '@rollup/plugin-json'
 import commonjs from '@rollup/plugin-commonjs'
 import pkg from './package.json'
@@ -25,6 +26,9 @@ export default (async () => [
     plugins: [
       json(),
       resolve(), // so Rollup can find `ms`
+      babel({
+        exclude: 'node_modules/**', // 只编译我们的源代码
+      }),
       commonjs(), // so Rollup can convert `ms` to an ES module
       isProd && (await import('rollup-plugin-terser')).terser(),
     ],
@@ -36,6 +40,11 @@ export default (async () => [
       { file: `dist/github-trending.cjs${prefix}.js`, format: 'cjs', banner },
       { file: `dist/github-trending.esm${prefix}.js`, format: 'es', banner },
     ],
-    plugins: [isProd && (await import('rollup-plugin-terser')).terser()],
+    plugins: [
+      babel({
+        exclude: 'node_modules/**', // 只编译我们的源代码
+      }),
+      isProd && (await import('rollup-plugin-terser')).terser(),
+    ],
   },
 ])()
