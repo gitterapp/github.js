@@ -2,9 +2,15 @@
   "name": "@githubjs/github-languages",
   "version": "1.1.5",
   "description": "A library to get `GitHub languages` for JavaScript developers.",
-  "main": "src/index.js",
+  "main": "dist/github-languages.cjs.js",
+  "module": "dist/github-languages.esm.js",
+  "browser": "dist/github-languages.umd.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "rimraf dist",
+    "build": "cross-env NODE_ENV=production rollup -c",
+    "dev": "rollup -c",
+    "dist": "npm run clean && npm run dev && npm run build",
+    "test": "echo \"Info: no test specified.\" && exit 0"
   },
   "keywords": [
     "github-languages",
@@ -28,6 +34,15 @@
   "dependencies": {
     "js-yaml": "^3.13.1",
     "request-promise": "^4.2.4"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^11.0.1",
+    "@rollup/plugin-json": "^4.0.2",
+    "@rollup/plugin-node-resolve": "^7.0.0",
+    "rollup-plugin-terser": "^5.2.0",
+    "rollup": "^1.29.0",
+    "cross-env": "^7.0.0",
+    "rimraf": "^3.0.2"
   },
   "peerDependencies": {
     "request": "^2.34"

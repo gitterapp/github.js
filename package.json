@@ -3,7 +3,10 @@
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "changelog": "lerna-changelog",
-    "clean": "lerna clean -y",
+    "dev": "lerna run dev",
+    "build": "lerna run build",
+    "clean": "lerna run clean",
+    "dist": "lerna run dist",
     "lint": "eslint --ext .js packages",
     "precommit": "lint-staged",
     "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
